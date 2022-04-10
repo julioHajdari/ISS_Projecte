@@ -2,24 +2,22 @@ package service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import dto.SatelitInformation;
-import jdk.nashorn.internal.ir.RuntimeNode;
-import models.Satelite;
+
 import okhttp3.*;
 import okhttp3.Request;
-import org.omg.CORBA.*;
-import org.omg.CORBA.Object;
 import respositories.AstronautRepository;
-import respositories.BasedRepository;
 import respositories.SatelitRepository;
-import utils.Utils;
-
-import java.util.List;
 
 public class SatelitService {
+
+    AstronautRepository astronautRepository ;
+    SatelitRepository satelitRepository;
 
 
     public SatelitService(AstronautRepository astronautRepository, SatelitRepository satelitRepository) throws Exception {
 
+        this.astronautRepository= astronautRepository;
+        this.satelitRepository = satelitRepository;
 
         if (astronautRepository == null)
             throw new Exception(" can not be null");
@@ -47,6 +45,8 @@ public class SatelitService {
             SatelitInformation satelitInformation = objectMapper.readValue(result,SatelitInformation.class);
             if (satelitInformation != null){
                 System.out.println("Yuhu");
+                satelitRepository.saveToDatabase(satelitInformation , "ISS");
+
             }
         } catch (Exception e) {
             e.printStackTrace();

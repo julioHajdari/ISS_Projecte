@@ -12,8 +12,8 @@ import lombok.Setter;
 public class PositionInformation {
 
     @JsonProperty("latitude")
-    protected String latitude;
+    protected double latitude;
 
     @JsonProperty("longitude")
-    protected String longitude;
+    protected double longitude;
 }

@@ -14,13 +14,14 @@ import java.util.List;
 public class SatelitInformation {
 
     @JsonProperty("timestamp")
-    protected String timestamp;
+    protected long timestamp;
 
     @JsonProperty("message")
     protected String message;
 
     @JsonProperty("iss_position")
     protected PositionInformation position;
+
 
 
 }
