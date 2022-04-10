@@ -11,4 +11,10 @@ public class AstronautService {
         if (astronautRepository==null)
             throw new Exception("can not be null");
     }
+
+  /*  public static AstronautRepository coordinateByName (){
+        try {
+
+        }
+    }*/
 }

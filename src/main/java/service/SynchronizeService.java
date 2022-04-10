@@ -9,7 +9,7 @@ import javax.jws.WebService;
 public class SynchronizeService {
 
 
-    public static String spacestation = "http://api.open-notify.org/iss-now.json";
+    public static String SPACESTATION = "http://api.open-notify.org/iss-now.json";
 
 
     SynchronizeService(AstronautRepository astronautRepository, SatelitRepository satelitRepository)throws Exception{

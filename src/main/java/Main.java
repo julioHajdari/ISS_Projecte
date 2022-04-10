@@ -14,7 +14,10 @@ public class Main {
 
         AstronautService astronautService = new AstronautService(astronautRepository, satelitRepository);
         SatelitService satelitService = new SatelitService(astronautRepository, satelitRepository);
-        }
 
+        satelitService.synDatabaseWithOpenSpaceStation();
     }
+
+
+}
 
