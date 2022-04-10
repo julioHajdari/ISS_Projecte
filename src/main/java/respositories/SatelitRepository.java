@@ -1,7 +1,7 @@
 package respositories;
 
 public class SatelitRepository extends BasedRepository {
-    SatelitRepository (){
+    public SatelitRepository(){
         super();
     }
 }

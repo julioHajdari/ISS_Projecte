@@ -1,7 +1,7 @@
 package respositories;
 
 public class AstronautRepository extends BasedRepository {
-    AstronautRepository (){
+    public AstronautRepository(){
         super();
     }
 }

@@ -19,11 +19,11 @@ public class Satelite {
     @Column(name = "satelite_name")
     private String name ;
     @Column(name = "timestampe")
-    private int timestamp;
+    private long timestamp;
     @Column(name = "latitude")
-    private int latitude;
+    private double latitude;
     @Column(name = "longtitude")
-    private int longtitude;
+    private double longtitude;
 
     @OneToMany(mappedBy = "satelit")
     private List<Astronaut> astronauts;
