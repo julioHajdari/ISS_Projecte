@@ -1,5 +1,7 @@
 package service;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import dto.SatelitInformation;
 import jdk.nashorn.internal.ir.RuntimeNode;
 import models.Satelite;
 import okhttp3.*;
@@ -39,6 +41,13 @@ public class SatelitService {
 
             String result = response.body().string();
             System.out.println(result);
+
+            ObjectMapper objectMapper = new ObjectMapper();
+
+            SatelitInformation satelitInformation = objectMapper.readValue(result,SatelitInformation.class);
+            if (satelitInformation != null){
+                System.out.println("Yuhu");
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
