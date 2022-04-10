@@ -1,4 +1,7 @@
 package respositories;
 
-public class SatelitRepository {
+public class SatelitRepository extends BasedRepository {
+    SatelitRepository (){
+        super();
+    }
 }
